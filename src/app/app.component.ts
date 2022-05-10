@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'authPage';
+  title = 'login-form';
+  loginForm! : FormGroup;
+  hide = true;
+
+  constructor(){}
+
+  ngOnInit() : void{
+    this.loginForm = new FormGroup({
+      emailFormControl: new FormControl('', [Validators.required,Validators.email]),
+      passwordFormControl: new FormControl('',[Validators.required])
+    })
+  }
+
 }
