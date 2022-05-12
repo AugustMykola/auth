@@ -49,10 +49,10 @@
   height: 14px;
   background: #272b2d;
   border-radius: 50%;
-}
+};
 
 .auth--logo-image{
-  width: 96.46%;
+  width: 100%;
   height: 100%;
   position: absolute;
   opacity: 0.4;
@@ -77,7 +77,7 @@
   width: 25.14%;
   height: 24.65%;
   left: 55.97%;
-  top: 37.22%;
+  top: 34.22%;
   padding: 0px;
 };
 
@@ -139,7 +139,7 @@
 
 }
 
-.auth-body__inputs {
+.auth-body--inputs {
   width: 100%;
   height: 64.86%;
   order: 0;
@@ -157,10 +157,10 @@
   border: none;
   margin-bottom: 20px;
   &:first-child {
-    margin: 13% 0;
+    margin: 40px 0;
   };
   .mat-input-element {
-    padding-top: 4.5px;
+    padding: 4.5px;
     width: 100%;
     height: 48px;
     font-weight: 400;
@@ -172,11 +172,19 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 6px;
+    background: none;
   };
   .mat-form-field-flex{
     border: none;
     margin: 0;
   };
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
   .mat-icon{
     color: #E3EBF2;
     cursor:pointer;
@@ -187,7 +195,6 @@
   .mat-form-field-infix{
     padding: 0;
     border: none;
-
   };
   .mat-form-field-suffix{
     top:0.6rem
@@ -195,9 +202,6 @@
  .mat-form-field-outline {
     color: #E3EBF2;
   };
-  .mat-form-field-autofill-control-selected{
-    background-color: #2F80ED;
-  }
   .mat-form-field-wrapper{
     padding: 0;
     margin: 0;
@@ -233,4 +237,3 @@
   cursor: pointer;
   margin: 15% 0;
 };
-
